@@ -3,9 +3,11 @@
 
 import csv
 
-with open('inc5000.csv') as csvfile:
+with open('inc5000-2017.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
 
+    print('INSERT INTO companies (rank, company_name, headcount, industry) VALUES')
+
     for row in readCSV:
-            print('INSERT INTO companies (rank, company_name, headcount, industry)')
-            print('VALUES(\'', row[1] + '\',\'' + row[2] + '\',\'' + row[11] + '\',\'' + row[12]+ '\');')
+
+            print('(' + row[1] + ',\'' + row[2] + '\',' + row[11] + ',\'' + row[12]+ '\'),')
