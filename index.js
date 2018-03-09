@@ -20,7 +20,7 @@ connection.connect(err => {
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Mira RAMON estoy conectando una base de datos sql con nodejs!')
+  res.send('Mira RAMON estoy conectando una base de datos sql XXX con nodejs!')
 });
 
 app.listen(3000, () => {
